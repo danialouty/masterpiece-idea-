@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScanJO | Healthcare made simple</title>
+    <link rel="stylesheet" href="../styles/landingpage.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">Scan<span>JO</span></a>
+
+        <nav>
+            <a href="#find-scan">Notes</a>
+            <a href="#find-scan">Probe</a>
+            <a href="#how-it-works">Process</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="language-button" type="button" aria-label="Switch to Arabic" aria-pressed="false">
+                <span class="language-active">EN</span>
+                <span class="language-divider">/</span>
+                <span>ع</span>
+            </button>
+            <a href="#find-scan" class="nav-button"><span data-i18n="getStarted">Get started</span> <span>↗</span></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow" data-i18n="eyebrow">YOUR HEALTH, SIMPLIFIED</span>
+
+                <h1>
+                    <span data-i18n="heroTitle">Health and<br>comprehensive.</span>
+                </h1>
+
+                <p data-i18n="heroDescription">Style guide, variability, or healthcare components,
+                    interactions, and guided with auto layout.</p>
+
+                <div class="hero-actions">
+                    <a href="#find-scan" class="primary-button">
+                        <span data-i18n="getStarted">Get started</span>
+                    </a>
+
+                    <a href="#how-it-works" class="secondary-button">
+                        <span data-i18n="exploreServices">Explore services</span> <span>↗</span>
+                    </a>
+                </div>
+
+                <div class="hero-badges" aria-label="Healthcare partners">
+                    <span class="avatar avatar-one">✚</span>
+                    <span class="avatar avatar-two">♥</span>
+                    <span class="avatar avatar-three">✦</span>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-glow"></div>
+                <div class="visual-heading" data-i18n="healthcare">Healthcare</div>
+                <div class="stat-card">
+                    <strong>1,200+</strong>
+                    <span>care options</span>
+                </div>
+                <div class="search-card">
+                    <span data-i18n="nextStep">Find your next step</span>
+                    <b>⌕</b>
+                </div>
+                <div class="visual-mark">✚</div>
+            </div>
+        </section>
+
+        <section id="find-scan" class="find-section">
+            <div class="section-heading">
+                <span class="eyebrow" data-i18n="whatWeOffer">WHAT WE OFFER</span>
+                <h2 data-i18n="ourServices">Our services</h2>
+                <p data-i18n="servicesDescription">Everything you need to make informed healthcare decisions.</p>
+            </div>
+
+            <div class="option-cards">
+                <article class="option-card">
+                    <span class="card-icon">⌕</span>
+                    <h3 data-i18n="findScan">Find a scan</h3>
+                    <p data-i18n="findScanDescription">Discover the right test and nearby center for your needs.</p>
+                    <a href="#"><span data-i18n="exploreScans">Explore scans</span> <span>↗</span></a>
+                </article>
+
+                <article class="option-card">
+                    <span class="card-icon">▣</span>
+                    <h3 data-i18n="uploadPrescription">Upload a prescription</h3>
+                    <p data-i18n="uploadDescription">Share your request and let us help identify your scan.</p>
+                    <a href="#"><span data-i18n="uploadNow">Upload now</span> <span>↗</span></a>
+                </article>
+
+                <article class="option-card">
+                    <span class="card-icon">⌁</span>
+                    <h3 data-i18n="compareCenters">Compare centers</h3>
+                    <p data-i18n="compareDescription">Review trusted locations, availability, and details.</p>
+                    <a href="#"><span data-i18n="viewCenters">View centers</span> <span>↗</span></a>
+                </article>
+
+                <article class="option-card">
+                    <span class="card-icon">♡</span>
+                    <h3 data-i18n="personalSupport">Personal support</h3>
+                    <p data-i18n="supportDescription">Get clear guidance through every step of your journey.</p>
+                    <a href="#"><span data-i18n="learnMore">Learn more</span> <span>↗</span></a>
+                </article>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-section">
+            <div>
+                <span class="eyebrow" data-i18n="betterCare">A BETTER WAY TO CARE</span>
+                <h2 data-i18n="howTitle">Finding a scan shouldn't be complicated.</h2>
+            </div>
+            <p data-i18n="howDescription">Search for your scan, compare nearby centers, and contact the center for availability.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#" class="logo">Scan<span>JO</span></a>
+        <p data-i18n="footerDescription">Care that feels clear.</p>
+        <div class="socials"><a href="#">●</a><a href="#">◎</a><a href="#">◉</a></div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                getStarted: 'Get started',
+                eyebrow: 'YOUR HEALTH, SIMPLIFIED',
+                heroTitle: 'Health and<br>comprehensive.',
+                heroDescription: 'Style guide, variability, or healthcare components, interactions, and guided with auto layout.',
+                exploreServices: 'Explore services',
+                healthcare: 'Healthcare',
+                nextStep: 'Find your next step',
+                whatWeOffer: 'WHAT WE OFFER',
+                ourServices: 'Our services',
+                servicesDescription: 'Everything you need to make informed healthcare decisions.',
+                findScan: 'Find a scan',
+                findScanDescription: 'Discover the right test and nearby center for your needs.',
+                exploreScans: 'Explore scans',
+                uploadPrescription: 'Upload a prescription',
+                uploadDescription: 'Share your request and let us help identify your scan.',
+                uploadNow: 'Upload now',
+                compareCenters: 'Compare centers',
+                compareDescription: 'Review trusted locations, availability, and details.',
+                viewCenters: 'View centers',
+                personalSupport: 'Personal support',
+                supportDescription: 'Get clear guidance through every step of your journey.',
+                learnMore: 'Learn more',
+                betterCare: 'A BETTER WAY TO CARE',
+                howTitle: "Finding a scan shouldn't be complicated.",
+                howDescription: 'Search for your scan, compare nearby centers, and contact the center for availability.',
+                footerDescription: 'Care that feels clear.'
+            },
+            ar: {
+                getStarted: 'ابدأ الآن',
+                eyebrow: 'رعايتك الصحية، أصبحت أبسط',
+                heroTitle: 'رعاية صحية<br>شاملة ومتكاملة.',
+                heroDescription: 'مكونات رعاية صحية مرنة، وتفاعلات وتجربة منظمة تناسب احتياجاتك.',
+                exploreServices: 'استكشف الخدمات',
+                healthcare: 'الرعاية الصحية',
+                nextStep: 'اعثر على خطوتك التالية',
+                whatWeOffer: 'ما نقدمه',
+                ourServices: 'خدماتنا',
+                servicesDescription: 'كل ما تحتاجه لاتخاذ قرارات صحية واثقة.',
+                findScan: 'ابحث عن فحص',
+                findScanDescription: 'اكتشف الفحص المناسب والمركز الأقرب لاحتياجاتك.',
+                exploreScans: 'استكشف الفحوصات',
+                uploadPrescription: 'ارفع وصفة طبية',
+                uploadDescription: 'شارك طلبك ودعنا نساعدك في تحديد الفحص المناسب.',
+                uploadNow: 'ارفع الآن',
+                compareCenters: 'قارن بين المراكز',
+                compareDescription: 'راجع المواقع الموثوقة والمواعيد والتفاصيل.',
+                viewCenters: 'عرض المراكز',
+                personalSupport: 'دعم شخصي',
+                supportDescription: 'احصل على إرشاد واضح في كل خطوة من رحلتك.',
+                learnMore: 'اعرف المزيد',
+                betterCare: 'طريقة أفضل للرعاية',
+                howTitle: 'العثور على فحص لا يجب أن يكون معقدًا.',
+                howDescription: 'ابحث عن فحصك، وقارن بين المراكز القريبة، وتواصل مع المركز لمعرفة المواعيد.',
+                footerDescription: 'رعاية واضحة وبسيطة.'
+            }
+        };
+
+        const languageButton = document.querySelector('.language-button');
+        let currentLanguage = 'en';
+
+        languageButton.addEventListener('click', () => {
+            currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+            const isArabic = currentLanguage === 'ar';
+            document.documentElement.lang = currentLanguage;
+            document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+            document.title = isArabic ? 'ScanJO | رعاية صحية بسيطة' : 'ScanJO | Healthcare made simple';
+
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                element.innerHTML = translations[currentLanguage][element.dataset.i18n];
+            });
+
+            languageButton.setAttribute('aria-label', isArabic ? 'التبديل إلى الإنجليزية' : 'Switch to Arabic');
+            languageButton.setAttribute('aria-pressed', String(isArabic));
+            languageButton.querySelector('.language-active').textContent = isArabic ? 'ع' : 'EN';
+            languageButton.querySelector('.language-active').nextElementSibling.nextElementSibling.textContent = isArabic ? 'EN' : 'ع';
+        });
+    </script>
+
+</body>
+</html>
