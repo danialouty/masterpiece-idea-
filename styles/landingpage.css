@@ -129,11 +129,12 @@ nav a {
 .nav-button span, .secondary-button span, .option-card a span { margin-left: 5px; }
 
 .hero {
-    min-height: 0;
+    min-height: 620px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(280px, .8fr) minmax(420px, 1.2fr);
     align-items: center;
-    padding: 12px 5.5% 70px;
+    gap: 6%;
+    padding: 42px 8% 70px;
     overflow: hidden;
 }
 
@@ -167,7 +168,9 @@ nav a {
 }
 
 .hero-content {
-    display: none;
+    position: relative;
+    z-index: 2;
+    max-width: 470px;
 }
 
 .hero-actions {
@@ -221,112 +224,78 @@ nav a {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 28px;
-    background: #eef1fb;
-    box-shadow: inset 0 0 0 1px #ffffff55;
+    border-style: none;
 }
 
 .visual-glow {
     position: absolute;
-    width: 65%;
-    height: 42%;
+    width: 70%;
+    height: 60%;
     background: #a7b9ee;
     filter: blur(45px);
     border-radius: 50%;
 }
 
-.visual-heading {
+.medical-orb {
     position: relative;
     z-index: 1;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(64px, 12vw, 170px);
-    letter-spacing: -9px;
-    margin-top: 35px;
-    white-space: nowrap;
+    display: grid;
+    place-items: center;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: #ffffff88;
+    box-shadow: 0 20px 55px #687bb744, inset 0 0 25px #ffffffaa;
+    animation: orb-pulse 4s ease-in-out infinite;
 }
 
-.visual-description {
+.medical-orb span {
+    color: var(--accent);
+    font-size: 54px;
+    line-height: 1;
+}
+
+.medical-orb small {
     position: absolute;
-    z-index: 2;
-    top: 78%;
-    left: 50%;
-    width: min(430px, 45%);
-    margin: 0;
-    transform: translate(-50%, -50%);
+    bottom: 35px;
     color: var(--muted);
-    font-size: 12px;
-    line-height: 1.6;
-    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
-.stat-card, .search-card {
+.medical-bubble {
     position: absolute;
-    z-index: 2;
-    padding: 12px 15px;
-    border-radius: 13px;
-    background: #ffffffdd;
-    box-shadow: 0 12px 25px #66739a24;
-}
-
-.stat-card { left: 9%; bottom: 25%; }
-.stat-card strong, .stat-card span { display: block; }
-.stat-card strong { font-size: 14px; }
-.stat-card span { color: var(--muted); font-size: 9px; }
-.search-card { right: 8%; bottom: 15%; width: 52%; font-size: 10px; }
-.search-card b { float: right; color: var(--accent); font-size: 18px; line-height: 14px; }
-.visual-mark {
-    position: absolute;
-    top: 21%;
-    right: 13%;
     z-index: 2;
     display: grid;
     place-items: center;
-    width: 42px;
-    height: 42px;
+    width: 64px;
+    height: 64px;
+    border: 1px solid #ffffffaa;
     border-radius: 50%;
-    background: white;
-    color: var(--accent);
-    box-shadow: 0 8px 20px #66739a24;
+    background: #ffffffcc;
+    box-shadow: 0 12px 26px #66739a30;
+    font-size: 27px;
+    animation: bubble-float 5s ease-in-out infinite;
 }
 
-.visual-note {
-    position: absolute;
-    z-index: 2;
-    right: 12%;
-    bottom: 32%;
-    display: grid;
-    gap: 4px;
-    width: 210px;
-    padding: 18px;
-    border-radius: 15px;
-    background: #ffffffdd;
-    box-shadow: 0 12px 25px #66739a24;
-    font-size: 10px;
+.bubble-one { top: 13%; left: 17%; animation-delay: -1s; }
+.bubble-two { top: 16%; right: 18%; animation-delay: -3s; }
+.bubble-three { top: 44%; left: 7%; animation-delay: -2s; }
+.bubble-four { right: 8%; bottom: 22%; animation-delay: -4s; }
+.bubble-five { bottom: 8%; left: 25%; animation-delay: -1.5s; }
+.bubble-six { bottom: 12%; right: 32%; animation-delay: -3.5s; }
+.bubble-seven { top: 35%; right: 4%; width: 45px; height: 45px; font-size: 22px; animation-delay: -.5s; }
+.bubble-eight { top: 61%; left: 21%; width: 42px; height: 42px; font-size: 20px; animation-delay: -2.5s; }
+
+@keyframes bubble-float {
+    0%, 100% { transform: translateY(0) rotate(-4deg); }
+    50% { transform: translateY(-18px) rotate(5deg); }
 }
 
-.visual-note span {
-    color: var(--muted);
-    line-height: 1.4;
-}
-
-.visual-dots {
-    position: absolute;
-    z-index: 3;
-    left: 48%;
-    bottom: 8%;
-    display: flex;
-    gap: 12px;
-}
-
-.visual-dots span {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: var(--ink);
-}
-
-.visual-dots span + span {
-    background: #9da9c7;
+@keyframes orb-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
 }
 
 .find-section,
@@ -429,25 +398,18 @@ nav a {
     }
 
     .hero-visual {
-        min-height: 390px;
+        min-height: 380px;
     }
 
-    .visual-heading {
-        font-size: clamp(43px, 15vw, 90px);
-        letter-spacing: -5px;
+    .medical-orb {
+        width: 130px;
+        height: 130px;
     }
 
-    .visual-description {
-        top: 75%;
-        width: 62%;
-        font-size: 11px;
-    }
-
-    .visual-note {
-        right: 7%;
-        bottom: 30%;
-        width: 145px;
-        padding: 12px;
+    .medical-bubble {
+        width: 50px;
+        height: 50px;
+        font-size: 21px;
     }
 
     .option-cards {
@@ -469,5 +431,12 @@ nav a {
 
     .nav-actions {
         margin-left: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .medical-orb,
+    .medical-bubble {
+        animation: none;
     }
 }
