@@ -299,13 +299,82 @@ nav a {
 }
 
 .find-section,
-.how-section,
+.about-section,
 .faq-section {
     padding: 70px 8%;
 }
 
 .find-section {
     background: var(--white);
+}
+
+.about-section {
+    background: linear-gradient(180deg, #f8f9ff 0%, #edf2ff 100%);
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    align-items: center;
+    gap: 32px;
+}
+
+.about-copy {
+    max-width: 640px;
+}
+
+.about-copy h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--ink);
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 10px;
+    letter-spacing: -1.2px;
+}
+
+.about-lead {
+    color: var(--ink);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.about-copy p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.about-panels {
+    display: grid;
+    gap: 18px;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid #dfe3ef;
+    border-radius: 18px;
+    padding: 22px 20px;
+    box-shadow: 0 10px 26px rgba(36, 95, 212, 0.06);
+}
+
+.about-card h3 {
+    color: var(--ink);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.about-banner {
+    margin-top: 6px;
+    padding: 16px 20px;
+    background: var(--ink);
+    color: white;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.3px;
 }
 
 .faq-section {
