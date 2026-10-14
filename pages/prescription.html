@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understand Your Prescription · ScanJO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../styles/prescription.css">
+</head>
+<body>
+  <header id="top">
+    <div class="navbar">
+      <a href="./landingpage.html" class="logo">Scan<span>JO<i class="fa-solid fa-stethoscope"></i></span></a>
+      <nav>
+        <a href="./landingpage.html#find-scan">Home</a>
+        <a href="./landingpage.html#about-us">About us</a>
+        <a href="./findScan.html" class="active">Services</a>
+        <a href="./landingpage.html#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="language-button" type="button" aria-label="Switch to Arabic">
+          <span class="language-active">EN</span>
+          <span class="language-divider">/</span>
+          <span>ع</span>
+        </button>
+        <a href="./login.html" class="nav-button">Get started <span>↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="prescription" class="hero">
+      <div class="container hero-content">
+        <div>
+          <h1>Understand Your Prescription</h1>
+          <p>Not sure what your doctor ordered? Upload your referral to help identify the scan, understand medical terms, and discover your next step.</p>
+        </div>
+        <div class="hero-icon">
+          <i class="fa-solid fa-file-medical"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="upload-section">
+      <div class="container">
+        <div class="upload-card">
+          <div class="upload-box">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <h3>Upload Your Doctor's Referral</h3>
+            <p>Upload a clear photo or PDF of your medical referral.</p>
+            <label for="referral" class="btn-upload">
+              <i class="fa-solid fa-paperclip"></i> Choose a File
+            </label>
+            <input type="file" id="referral" accept=".jpg,.jpeg,.png,.pdf" hidden>
+            <small>Clear images help improve text recognition.</small>
+          </div>
+
+          <div class="privacy-note">
+            <i class="fa-solid fa-shield-halved"></i>
+            <p>Your referral may contain sensitive health information. Only upload documents you are comfortable sharing.</p>
+          </div>
+
+          <div class="divider"><span>or</span></div>
+
+          <div class="alt-input">
+            <label for="scan-name">Already know the scan name?</label>
+            <div class="input-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="scan-name" placeholder="e.g. MRI Lumbar Spine">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="how-grid">
+          <div class="how-card">
+            <span>01</span>
+            <i class="fa-solid fa-upload"></i>
+            <h4>Upload</h4>
+            <p>Share a clear image or PDF of your referral.</p>
+          </div>
+          <div class="how-card">
+            <span>02</span>
+            <i class="fa-solid fa-brain"></i>
+            <h4>Understand</h4>
+            <p>AI can help identify the scan name and explain medical terms.</p>
+          </div>
+          <div class="how-card">
+            <span>03</span>
+            <i class="fa-solid fa-hospital"></i>
+            <h4>Find Your Scan</h4>
+            <p>Confirm the scan details and explore medical centers that offer it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <div class="container">
+        <h2>Your Scan, Explained</h2>
+        <div class="preview-card">
+          <span class="preview-badge"><i class="fa-solid fa-eye"></i> Sample Preview</span>
+          <div class="preview-row">
+            <strong>Possible scan:</strong>
+            <span>MRI — Lumbar Spine</span>
+          </div>
+          <div class="preview-row">
+            <strong>Simple explanation:</strong>
+            <span>An MRI of the lower back that produces detailed images of the spine and surrounding soft tissues.</span>
+          </div>
+          <div class="preview-row">
+            <strong>Extracted text:</strong>
+            <span class="code">"MRI L-Spine w/o contrast"</span>
+          </div>
+          <div class="preview-actions">
+            <button type="button" class="btn-yes"><i class="fa-solid fa-check"></i> This looks correct</button>
+            <button type="button" class="btn-no"><i class="fa-solid fa-question"></i> I'm not sure</button>
+          </div>
+          <p class="preview-note"><i class="fa-solid fa-circle-info"></i> This is a preview only. If your referral is unclear, please confirm with your referring healthcare professional.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-section">
+      <div class="container next-content">
+        <h2>Ready to Find Your Scan?</h2>
+        <p>Use your confirmed scan name to explore medical centers and equipment availability.</p>
+        <a href="./findScan.html" class="btn-search">
+          <i class="fa-solid fa-magnifying-glass"></i> Find Available Centers
+        </a>
+      </div>
+    </section>
+
+    <section class="safety-section">
+      <div class="container safety-note">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>ScanJO helps explain medical terminology and locate healthcare services. It does not provide diagnoses or replace medical advice. Confirm your referral details and preparation instructions with your healthcare provider.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="./landingpage.html" class="logo">Scan<span>JO</span></a>
+        <p>Care that feels clear. Understand your referral and find your next step with confidence.</p>
+      </div>
+      <div class="footer-column">
+        <h2>Explore</h2>
+        <a href="./landingpage.html">Home</a>
+        <a href="./findScan.html">Find a scan</a>
+        <a href="#prescription">Prescription</a>
+        <a href="./landingpage.html#faq">FAQ</a>
+      </div>
+      <div class="footer-column">
+        <h2>Connect with us</h2>
+        <p>Follow ScanJO for clearer healthcare guidance.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ScanJO. All rights reserved.</p>
+      <a href="#top">Back to top <span>↑</span></a>
+    </div>
+  </footer>
+
+</body>
+</html>
