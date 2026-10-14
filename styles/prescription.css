@@ -69,13 +69,17 @@ header.scrolled .navbar {
 }
 
 .logo span { color: var(--accent); }
-.logo i { margin-left: 3px; }
+.logo i {
+  margin-left: 3px;
+  color: var(--ink);
+  font-size: 15px;
+}
 
 nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 30px;
 }
 
 nav a {
@@ -102,11 +106,73 @@ nav a.active::after {
   content: "";
 }
 
+.services-menu {
+  position: relative;
+}
+
+.services-menu summary {
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  list-style: none;
+  text-transform: uppercase;
+  transition: color .2s ease;
+}
+
+.services-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.services-menu summary span {
+  margin-left: 3px;
+  font-size: 12px;
+}
+
+.services-menu summary:hover,
+.services-menu[open] summary {
+  color: var(--accent);
+}
+
+.services-dropdown {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  display: grid;
+  min-width: 220px;
+  padding: 8px;
+  border: 1px solid rgba(157, 169, 199, .45);
+  border-radius: 14px;
+  background: rgba(249, 250, 255, .98);
+  box-shadow: 0 14px 30px rgba(23, 27, 47, .12);
+  transform: translateX(-50%);
+}
+
+.services-dropdown a {
+  padding: 9px 11px;
+  border-radius: 9px;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.services-dropdown a:hover {
+  background: var(--lavender-light);
+  color: var(--accent);
+}
+
 .nav-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   padding: 11px 17px;
   border-radius: 999px;
+  font: 700 11px "DM Sans", sans-serif;
   background: var(--ink);
   color: white !important;
+  text-transform: uppercase;
+  transition: background .2s ease, transform .2s ease;
 }
 
 .nav-button span { margin-left: 5px; }
@@ -139,6 +205,7 @@ nav a.active::after {
 
 .nav-button:hover {
   background: #252b47;
+  transform: translateY(-1px);
 }
 
 .container {

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Your Options | ScanJO</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../styles/compareOptions.css">
+</head>
+<body>
+
+  <header id="top">
+    <div class="navbar">
+      <a href="./landingpage.html" class="logo">
+        Scan<span>JO<i class="fa-solid fa-stethoscope"></i></span>
+      </a>
+      <nav>
+        <a href="./landingpage.html#find-scan">Home</a>
+        <a href="./landingpage.html#about-us">About us</a>
+        <details class="services-menu">
+          <summary class="active">Services <span aria-hidden="true">⌄</span></summary>
+          <div class="services-dropdown">
+            <a href="./findScan.html">Find a scan</a>
+            <a href="./prescription.html">Understand your prescription</a>
+            <a href="./discoverCenters.html">Discover nearby centers</a>
+            <a href="./compareOptions.html">Compare options</a>
+          </div>
+        </details>
+        <a href="./landingpage.html#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="language-button" type="button" aria-label="Switch to Arabic">
+          <span class="language-active">EN</span>
+          <span class="language-divider">/</span>
+          <span>ع</span>
+        </button>
+        <a href="./login.html" class="nav-button">Get started <span>↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="content-width">
+        <a href="./discoverCenters.html" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> Back to Discover Nearby Centers
+        </a>
+        <span class="eyebrow">Your Health, Simplified</span>
+        <h1>Compare Your Options</h1>
+        <p>Compare medical centers, available services, and appointment options to find the right choice for you.</p>
+      </div>
+    </section>
+
+    <section class="procedure-section">
+      <div class="content-width">
+        <div class="procedure-card">
+          <div>
+            <span class="procedure-label">Comparing for</span>
+            <h2>MRI Scan</h2>
+          </div>
+          <p class="procedure-note">
+            <i class="fa-solid fa-circle-info"></i>
+            Information depends on the selected centers and available data. Missing values are shown as "Not provided".
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-section">
+      <div class="content-width">
+        <div class="comparison-scroll">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th class="row-label">Details</th>
+
+                <th>
+                  <div class="center-head">
+                    <button class="remove-btn" title="Remove center">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h3>Al-Khalidi Medical Center</h3>
+                    <span class="badge">Confirmed</span>
+                  </div>
+                </th>
+
+                <th>
+                  <div class="center-head">
+                    <button class="remove-btn" title="Remove center">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h3>Zarqa Radiology Center</h3>
+                    <span class="badge badge-muted">Sample Data</span>
+                  </div>
+                </th>
+
+                <th>
+                  <div class="center-head">
+                    <button class="remove-btn" title="Remove center">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h3>Irbid Scan & Imaging</h3>
+                    <span class="badge">Confirmed</span>
+                  </div>
+                </th>
+
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="row-label">Location</td>
+                <td>Amman, Abdoun</td>
+                <td>Zarqa, New Zarqa</td>
+                <td>Irbid, University Street</td>
+              </tr>
+
+              <tr>
+                <td class="row-label">Required Procedure</td>
+                <td><span class="tag">MRI</span></td>
+                <td><span class="tag">MRI</span></td>
+                <td><span class="tag">MRI</span></td>
+              </tr>
+
+              <tr>
+                <td class="row-label">Equipment Availability</td>
+                <td><span class="ok"><i class="fa-solid fa-check"></i> Available</span></td>
+                <td><span class="warn"><i class="fa-solid fa-clock"></i> Not confirmed</span></td>
+                <td><span class="ok"><i class="fa-solid fa-check"></i> Available</span></td>
+              </tr>
+
+              <tr>
+                <td class="row-label">Appointment Options</td>
+                <td>
+                  <a href="#" class="btn-link"><i class="fa-solid fa-calendar-check"></i> View Schedule</a>
+                </td>
+                <td>Not provided</td>
+                <td>
+                  <a href="#" class="btn-link"><i class="fa-solid fa-calendar-check"></i> View Schedule</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="row-label">Price</td>
+                <td>Not provided</td>
+                <td>Not provided</td>
+                <td>Not provided</td>
+              </tr>
+
+              <tr>
+                <td class="row-label">Additional Services</td>
+                <td>CT Scan, Ultrasound</td>
+                <td>PET-CT</td>
+                <td>CT Scan, Ultrasound</td>
+              </tr>
+
+              <tr>
+                <td class="row-label">Actions</td>
+                <td><a href="#" class="btn-primary">View Center Details</a></td>
+                <td><a href="#" class="btn-primary">View Center Details</a></td>
+                <td><a href="#" class="btn-primary">View Center Details</a></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+        <div class="add-center">
+          <a href="./discoverCenters.html" class="add-btn">
+            <i class="fa-solid fa-plus"></i> Add Another Center
+          </a>
+          <p>You can compare up to 3 centers at a time.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="./landingpage.html" class="logo">Scan<span>JO</span></a>
+        <p>Care that feels clear.</p>
+      </div>
+      <div class="footer-column">
+        <h2>Explore</h2>
+        <a href="./landingpage.html#find-scan">Home</a>
+        <a href="./landingpage.html#about-us">About us</a>
+        <a href="./discoverCenters.html">Services</a>
+        <a href="./landingpage.html#faq">FAQ</a>
+      </div>
+      <div class="footer-column footer-social-column">
+        <h2>Connect with us</h2>
+        <p>Follow ScanJO for clearer healthcare guidance.</p>
+        <div class="socials" aria-label="Social media links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ScanJO. All rights reserved.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector("header");
+
+    const updateHeaderState = () => {
+      header.classList.toggle("scrolled", window.scrollY > 24);
+    };
+
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+  </script>
+</body>
+</html>

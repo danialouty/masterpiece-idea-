@@ -20,7 +20,15 @@
       <nav>
         <a href="#find-scan">Home</a>
         <a href="#about-us">About us</a>
-        <a href="#find-scan">Services</a>
+        <details class="services-menu">
+          <summary>Services <span aria-hidden="true">⌄</span></summary>
+          <div class="services-dropdown">
+            <a href="./findScan.html">Find a scan</a>
+            <a href="./prescription.html">Understand your prescription</a>
+            <a href="./discoverCenters.html">Discover nearby centers</a>
+            <a href="./compareOptions.html">Compare options</a>
+          </div>
+        </details>
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -228,7 +236,7 @@
               Compare available center information, services, and appointment
               options in one place.
             </p>
-            <a href="#"
+            <a href="./compareOptions.html"
               ><span data-i18n="learnMore">Learn more</span> <span>↗</span></a
             >
             </div>
@@ -239,8 +247,8 @@
       <section id="faq" class="faq-section">
         <div class="section-heading">
           <span class="eyebrow" data-i18n="faqEyebrow"
-            >FREQUENTLY ASKED QUESTIONS</span
-          >
+            >FREQUENTLY ASKED QUESTIONS</span>
+          
           <h2 data-i18n="faqTitle">FAQ</h2>
         </div>
 
@@ -321,6 +329,16 @@
       </div>
     </footer>
 
+    <script>
+      const header = document.querySelector("header");
+
+      const updateHeaderState = () => {
+        header.classList.toggle("scrolled", window.scrollY > 24);
+      };
+
+      updateHeaderState();
+      window.addEventListener("scroll", updateHeaderState, { passive: true });
+    </script>
 
   </body>
 </html>
