@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Scan · ScanJO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../styles/findScan.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="top">
+    <div class="navbar">
+      <a href="./landingpage.html" class="logo">Scan<span>JO<i class="fa-solid fa-stethoscope"></i></span></a>
+      <nav>
+        <a href="./landingpage.html#find-scan">Home</a>
+        <a href="#find-scan" class="active">Find a scan</a>
+        <a href="./landingpage.html#about-us">About us</a>
+        <a href="./landingpage.html#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="./login.html" class="nav-button">Sign in <span>↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- INTRO -->
+    <section id="find-scan" class="page-intro">
+      <div class="container intro-content">
+        <div class="intro-text">
+          <h1>Find Your Scan</h1>
+          <p>Discover medical centers that offer the scan or procedure you need. Explore equipment availability and find your next step with confidence.</p>
+        </div>
+        <div class="intro-illustration">
+          <div class="pulse-ring"></div>
+          <i class="fa-solid fa-wave-square"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH CARD -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-card">
+          <form action="#" method="get">
+            <div class="search-field">
+              <label for="scan-type">What scan or procedure do you need?</label>
+              <div class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="scan-type" placeholder="Search MRI, CT Scan, PET-CT...">
+              </div>
+            </div>
+            <div class="search-field">
+              <label for="location">Choose your location</label>
+              <div class="input-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <select id="location">
+                  <option value="" disabled selected>Select a city</option>
+                  <option>Amman</option>
+                  <option>Zarqa</option>
+                  <option>Irbid</option>
+                  <option>Aqaba</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <button type="button" class="btn-search">
+              <i class="fa-solid fa-magnifying-glass"></i> Find Available Centers
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="searchResults" class="results-section" aria-live="polite">
+      <div class="container">
+        <div class="results-heading">
+          <div>
+            <span class="results-label">DEMO RESULTS</span>
+            <h2>Available centers</h2>
+          </div>
+          <p>6 demo results found</p>
+        </div>
+        <div class="results-grid">
+          <article class="result-card">
+            <div class="result-card-top">
+              <div>
+                <span class="availability"><i class="fa-solid fa-circle"></i> Available for demo</span>
+                <h3>King Hussein Cancer Center</h3>
+                <p class="result-location"><i class="fa-solid fa-location-dot"></i> Amman, Jordan</p>
+              </div>
+              <span class="scan-badge">MRI</span>
+            </div>
+            <div class="device-details">
+              <div class="device-detail"><span>Device name</span><strong>Siemens MAGNETOM Aera</strong></div>
+            </div>
+            <div class="result-description">
+              <strong>About this device</strong>
+              <p>High-quality magnetic resonance imaging for organs, joints, and soft tissues.</p>
+            </div>
+            <div class="preparation">
+              <strong><i class="fa-solid fa-clipboard-check"></i> Preparation instructions</strong>
+              <p>Remove metal objects and tell the technician if you have implants. Follow the center's fasting instructions if contrast is required.</p>
+            </div>
+            <button class="result-action" type="button">View center details <span>↗</span></button>
+          </article>
+
+          <article class="result-card">
+            <div class="result-card-top">
+              <div>
+                <span class="availability"><i class="fa-solid fa-circle"></i> Available for demo</span>
+                <h3>Jordan Hospital</h3>
+                <p class="result-location"><i class="fa-solid fa-location-dot"></i> Amman, Jordan</p>
+              </div>
+              <span class="scan-badge">CT</span>
+            </div>
+            <div class="device-details">
+              <div class="device-detail"><span>Device name</span><strong>GE Revolution CT</strong></div>
+            </div>
+            <div class="result-description">
+              <strong>About this device</strong>
+              <p>Fast cross-sectional imaging for detailed views of bones, organs, and blood vessels.</p>
+            </div>
+            <div class="preparation">
+              <strong><i class="fa-solid fa-clipboard-check"></i> Preparation instructions</strong>
+              <p>Bring your referral and previous scans. You may be asked to avoid food before a contrast-enhanced scan.</p>
+            </div>
+            <button class="result-action" type="button">View center details <span>↗</span></button>
+          </article>
+
+          <article class="result-card">
+            <div class="result-card-top">
+              <div>
+                <span class="availability"><i class="fa-solid fa-circle"></i> Available for demo</span>
+                <h3>Irbid Specialized Medical Center</h3>
+                <p class="result-location"><i class="fa-solid fa-location-dot"></i> Irbid, Jordan</p>
+              </div>
+              <span class="scan-badge">Ultrasound</span>
+            </div>
+            <div class="device-details">
+              <div class="device-detail"><span>Device name</span><strong>Philips Affiniti 70</strong></div>
+            </div>
+            <div class="result-description">
+              <strong>About this device</strong>
+              <p>Real-time imaging that uses sound waves to examine organs and soft tissues.</p>
+            </div>
+            <div class="preparation">
+              <strong><i class="fa-solid fa-clipboard-check"></i> Preparation instructions</strong>
+              <p>Preparation depends on the body area. Ask the center whether you should arrive with a full bladder.</p>
+            </div>
+            <button class="result-action" type="button">View center details <span>↗</span></button>
+          </article>
+
+          <article class="result-card">
+            <div class="result-card-top">
+              <div>
+                <span class="availability"><i class="fa-solid fa-circle"></i> Available for demo</span>
+                <h3>Al Khalidi Hospital</h3>
+                <p class="result-location"><i class="fa-solid fa-location-dot"></i> Amman, Jordan</p>
+              </div>
+              <span class="scan-badge">MRI</span>
+            </div>
+            <div class="device-details">
+              <div class="device-detail"><span>Device name</span><strong>Philips Ingenia 1.5T</strong></div>
+            </div>
+            <div class="result-description">
+              <strong>About this device</strong>
+              <p>Detailed imaging for the brain, spine, joints, and other soft tissues.</p>
+            </div>
+            <div class="preparation">
+              <strong><i class="fa-solid fa-clipboard-check"></i> Preparation instructions</strong>
+              <p>Wear comfortable clothing without metal and share any implant information before the appointment.</p>
+            </div>
+            <button class="result-action" type="button">View center details <span>↗</span></button>
+          </article>
+
+          <article class="result-card">
+            <div class="result-card-top">
+              <div>
+                <span class="availability"><i class="fa-solid fa-circle"></i> Available for demo</span>
+                <h3>Zarqa Governmental Hospital</h3>
+                <p class="result-location"><i class="fa-solid fa-location-dot"></i> Zarqa, Jordan</p>
+              </div>
+              <span class="scan-badge">CT</span>
+            </div>
+            <div class="device-details">
+              <div class="device-detail"><span>Device name</span><strong>Siemens SOMATOM go.Up</strong></div>
+            </div>
+            <div class="result-description">
+              <strong>About this device</strong>
+              <p>Efficient imaging for trauma, chest, abdomen, and general diagnostic examinations.</p>
+            </div>
+            <div class="preparation">
+              <strong><i class="fa-solid fa-clipboard-check"></i> Preparation instructions</strong>
+              <p>Bring your referral and arrive early. Contrast scans may require fasting and a kidney function test.</p>
+            </div>
+            <button class="result-action" type="button">View center details <span>↗</span></button>
+          </article>
+
+          <article class="result-card">
+            <div class="result-card-top">
+              <div>
+                <span class="availability"><i class="fa-solid fa-circle"></i> Available for demo</span>
+                <h3>Aqaba Medical Imaging Center</h3>
+                <p class="result-location"><i class="fa-solid fa-location-dot"></i> Aqaba, Jordan</p>
+              </div>
+              <span class="scan-badge">Ultrasound</span>
+            </div>
+            <div class="device-details">
+              <div class="device-detail"><span>Device name</span><strong>GE LOGIQ P9</strong></div>
+            </div>
+            <div class="result-description">
+              <strong>About this device</strong>
+              <p>Clear real-time imaging for abdominal, pelvic, and musculoskeletal examinations.</p>
+            </div>
+            <div class="preparation">
+              <strong><i class="fa-solid fa-clipboard-check"></i> Preparation instructions</strong>
+              <p>Ask the center about fasting or a full bladder depending on the requested examination.</p>
+            </div>
+            <button class="result-action" type="button">View center details <span>↗</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR SCANS -->
+    <section class="popular-scans">
+      <div class="container">
+        <h2>Popular Scans</h2>
+        <div class="scans-grid">
+          <div class="scan-card">
+            <i class="fa-solid fa-magnet"></i>
+            <h3>MRI Scan</h3>
+            <p>Detailed imaging of organs and soft tissues.</p>
+          </div>
+          <div class="scan-card">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>CT Scan</h3>
+            <p>Cross-sectional images of the body.</p>
+          </div>
+          <div class="scan-card">
+            <i class="fa-solid fa-atom"></i>
+            <h3>PET-CT Scan</h3>
+            <p>Specialized imaging for certain diagnostic needs.</p>
+          </div>
+          <div class="scan-card">
+            <i class="fa-solid fa-wave-square"></i>
+            <h3>Ultrasound</h3>
+            <p>Imaging that uses sound waves.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO SECTION -->
+    <section class="info-section">
+      <div class="container">
+        <h2>Your Care Journey, Made Simpler</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fa-solid fa-hospital"></i>
+            <h4>Find Medical Centers</h4>
+            <p>Locate trusted centers offering your specific scan.</p>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <h4>Check Equipment Availability</h4>
+            <p>Explore reported equipment availability to plan your visit.</p>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-notes-medical"></i>
+            <h4>Understand Preparation</h4>
+            <p>Learn about preparation requirements before your appointment.</p>
+          </div>
+        </div>
+        <div class="safety-note">
+          <i class="fa-solid fa-circle-info"></i>
+          <p><strong>Important:</strong> Always confirm specific preparation instructions with your healthcare provider or the medical center before your scan.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="./landingpage.html" class="logo">Scan<span>JO</span></a>
+        <p>Care that feels clear. Find the right scan and your next step with confidence.</p>
+      </div>
+      <div class="footer-column">
+        <h2>Explore</h2>
+        <a href="./landingpage.html">Home</a>
+        <a href="#find-scan">Find a scan</a>
+        <a href="./landingpage.html#about-us">About us</a>
+        <a href="./landingpage.html#faq">FAQ</a>
+      </div>
+      <div class="footer-column">
+        <h2>Connect with us</h2>
+        <p>Follow ScanJO for clearer healthcare guidance.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ScanJO. All rights reserved.</p>
+      <a href="#top">Back to top <span>↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>
