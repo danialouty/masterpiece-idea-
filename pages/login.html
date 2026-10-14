@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScanJO · Sign in</title>
+
+  <!-- Font & icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+
+
+
+    
+  <!-- The Login Card -->
+  <div class="login-card">
+    <!-- Brand header -->
+    <div class="brand">
+      <div class="logo-text">
+        Scan<span>JO</span>
+      </div>
+      <div class="logo-mark">
+        <i class="fas fa-stethoscope"></i>
+      </div>
+    </div>
+
+    <!-- Tagline -->
+    <div class="tagline">
+      <i class="fas fa-circle-radiation"></i> 
+      Your health, simplified. Sign in to continue your healthcare journey.
+    </div>
+
+    <!-- Login form -->
+    <form id="loginForm" action="#" method="post">
+      <div class="form-group">
+        <label for="email">Email or Patient ID</label>
+        <div class="input-wrapper">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="email" name="email" placeholder="you@example.com or PT-10234" autocomplete="email" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-wrapper">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required>
+        </div>
+      </div>
+
+      <div class="form-options">
+        <label class="remember">
+          <input type="checkbox" checked> Keep me signed in
+        </label>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn-login">
+        <span>Login to ScanJO</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+
+      <div class="divider">or continue with</div>
+
+      <!-- subtle signup / demo options -->
+      <div class="footer-links">
+        <a href="./signup.html"><i class="fas fa-user-plus"></i> Create account</a>
+        <a href="#"><i class="fas fa-flask"></i> Demo access</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Floating Background Elements matching the reference -->
+  <div class="floating-icons">
+    <div class="icon-bubble"><i class="fas fa-flask"></i></div>
+    <div class="icon-bubble"><i class="fas fa-heart"></i></div>
+    <div class="icon-bubble"><i class="fas fa-stethoscope"></i></div>
+    <div class="icon-bubble"><i class="fas fa-bone"></i></div>
+    <div class="icon-bubble"><i class="fas fa-pills"></i></div>
+    <div class="icon-bubble"><i class="fas fa-dna"></i></div>
+    <div class="icon-bubble"><i class="fas fa-x-ray"></i></div>
+    <div class="icon-bubble"><i class="fas fa-syringe"></i></div>
+    <div class="icon-bubble"><i class="fas fa-notes-medical"></i></div>
+    
+    <!-- The large central cross bubble -->
+    <div class="central-bubble">
+      <i class="fas fa-plus"></i>
+      <span>ScanJO</span>
+    </div>
+  </div>
+
+
+</body>
+</html>

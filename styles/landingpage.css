@@ -635,6 +635,7 @@ nav a:hover {
 
 .footer-bottom a span {
     margin-left: 5px;
+}
 
 @media (max-width: 768px) {
     .navbar {
