@@ -1,6 +1,7 @@
 :root {
   --ink: #171b2f;
   --muted: #72778f;
+  --lavender: #c7d0eb;
   --lavender-light: #e7ebf8;
   --white: #f9faff;
   --accent: #245fd4;
@@ -31,10 +32,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(199, 208, 235, .92);
-  box-shadow: 0 8px 24px rgba(23, 27, 47, .08);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(199, 208, 235, .86);
+  transition: background-color .25s ease, box-shadow .25s ease;
 }
 
 .navbar {
@@ -43,7 +42,22 @@ header {
   justify-content: space-between;
   gap: 28px;
   padding: 22px 5.5%;
-  border-bottom: 1px solid rgba(157, 169, 199, .35);
+  border-bottom: 1px solid transparent;
+  background: var(--lavender);
+  transition: padding .25s ease, background-color .25s ease, border-color .25s ease;
+}
+
+header.scrolled {
+  background: rgba(249, 250, 255, .84);
+  box-shadow: 0 8px 24px rgba(23, 27, 47, .1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+header.scrolled .navbar {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom-color: rgba(157, 169, 199, .45);
   background: transparent;
 }
 

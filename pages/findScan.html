@@ -315,5 +315,16 @@
       <a href="#top">Back to top <span>↑</span></a>
     </div>
   </footer>
+
+  <script>
+    const header = document.querySelector("header");
+
+    const updateHeaderState = () => {
+      header.classList.toggle("scrolled", window.scrollY > 24);
+    };
+
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+  </script>
 </body>
 </html>

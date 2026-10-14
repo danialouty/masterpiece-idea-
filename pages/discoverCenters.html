@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Nearby Centers | ScanJO</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <link rel="stylesheet" href="../styles/discoverCenters.css">
+</head>
+<body>
+
+  <header id="top">
+    <div class="navbar">
+      <a href="landingpage.html" class="logo">
+        Scan<span>JO<i class="fa-solid fa-stethoscope"></i></span>
+      </a>
+      <nav>
+        <a href="landingpage.html#find-scan">Home</a>
+        <a href="landingpage.html#about-us">About us</a>
+        <a href="landingpage.html#find-scan" class="active">Services</a>
+        <a href="landingpage.html#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="language-button" type="button" aria-label="Switch to Arabic">
+          <span class="language-active">EN</span>
+          <span class="language-divider">/</span>
+          <span>ع</span>
+        </button>
+        <a href="./login.html" class="nav-button">Get started <span>↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <div class="page-intro-content">
+        <span class="eyebrow">Your Health, Simplified</span>
+        <h1>Discover Nearby Centers</h1>
+        <p>Find medical centers across Jordan, explore their services, and discover where to get the care you need.</p>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="content-width">
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search by center, city, or medical procedure...">
+        </div>
+
+        <div class="filters">
+          <select>
+            <option>All Cities</option>
+            <option>Amman</option>
+            <option>Zarqa</option>
+            <option>Irbid</option>
+            <option>Aqaba</option>
+          </select>
+          <select>
+            <option>All Procedures</option>
+            <option>MRI</option>
+            <option>CT Scan</option>
+            <option>PET-CT</option>
+            <option>Ultrasound</option>
+          </select>
+          <select>
+            <option>Any Availability</option>
+            <option>Available Appointments</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-section">
+      <div class="content-width results-layout">
+        <div class="center-list">
+          <article class="center-card">
+            <div class="card-head">
+              <h3>Al-Khalidi Medical Center</h3>
+              <span class="badge">Available</span>
+            </div>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Amman, Abdoun</p>
+            <div class="card-tags">
+              <span>MRI</span><span>CT Scan</span><span>Ultrasound</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="btn-primary">View Details</a>
+              <a href="#" class="btn-link"><i class="fa-solid fa-diamond-turn-right"></i> Directions</a>
+            </div>
+          </article>
+
+          <article class="center-card">
+            <div class="card-head">
+              <h3>Zarqa Radiology Center</h3>
+              <span class="badge badge-muted">Sample Data</span>
+            </div>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Zarqa, New Zarqa</p>
+            <div class="card-tags">
+              <span>MRI</span><span>PET-CT</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="btn-primary">View Details</a>
+              <a href="#" class="btn-link"><i class="fa-solid fa-diamond-turn-right"></i> Directions</a>
+            </div>
+          </article>
+
+          <article class="center-card">
+            <div class="card-head">
+              <h3>Irbid Scan & Imaging</h3>
+              <span class="badge">Available</span>
+            </div>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Irbid, University Street</p>
+            <div class="card-tags">
+              <span>CT Scan</span><span>Ultrasound</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="btn-primary">View Details</a>
+              <a href="#" class="btn-link"><i class="fa-solid fa-diamond-turn-right"></i> Directions</a>
+            </div>
+          </article>
+
+          <div class="empty-state">
+            <i class="fa-solid fa-circle-info"></i>
+            <p>No centers match your search yet. Try a different city or procedure.</p>
+          </div>
+        </div>
+
+        <div class="map-wrapper">
+          <div class="map-canvas">
+            <div class="map-grid"></div>
+
+            <div class="marker" style="top: 38%; left: 30%;">
+              <span class="dot"></span>
+              <span class="tooltip">Al-Khalidi Medical Center · Amman</span>
+            </div>
+            <div class="marker" style="top: 42%; left: 55%;">
+              <span class="dot"></span>
+              <span class="tooltip">Zarqa Radiology Center · Zarqa</span>
+            </div>
+            <div class="marker" style="top: 22%; left: 40%;">
+              <span class="dot"></span>
+              <span class="tooltip">Irbid Scan & Imaging · Irbid</span>
+            </div>
+
+            <div class="map-label">
+              <i class="fa-solid fa-map-location-dot"></i> Jordan
+            </div>
+          </div>
+          <p class="map-note"><i class="fa-solid fa-circle-info"></i> Sample preview — interactive Leaflet map requires JavaScript.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="landingpage.html" class="logo">Scan<span>JO</span></a>
+        <p>Care that feels clear.</p>
+      </div>
+      <div class="footer-column">
+        <h2>Explore</h2>
+        <a href="landingpage.html#find-scan">Home</a>
+        <a href="landingpage.html#about-us">About us</a>
+        <a href="landingpage.html#find-scan">Services</a>
+        <a href="landingpage.html#faq">FAQ</a>
+      </div>
+      <div class="footer-column footer-social-column">
+        <h2>Connect with us</h2>
+        <p>Follow ScanJO for clearer healthcare guidance.</p>
+        <div class="socials" aria-label="Social media links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ScanJO. All rights reserved.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector("header");
+
+    const updateHeaderState = () => {
+      header.classList.toggle("scrolled", window.scrollY > 24);
+    };
+
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+  </script>
+</body>
+</html>
