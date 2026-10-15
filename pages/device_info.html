@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Information · ScanJO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../styles/device_info.css">
+</head>
+<body>
+  <header id="top">
+    <div class="navbar">
+      <a href="./landingpage.html" class="logo">Scan<span>JO<i class="fa-solid fa-stethoscope"></i></span></a>
+      <nav>
+        <a href="./landingpage.html#find-scan">Home</a>
+        <a href="./landingpage.html#about-us">About us</a>
+        <details class="services-menu">
+          <summary class="active">Services <span aria-hidden="true">⌄</span></summary>
+          <div class="services-dropdown">
+            <a href="./findScan.html">Find a scan</a>
+            <a href="./prescription.html">Understand your prescription</a>
+            <a href="./discoverCenters.html">Discover nearby centers</a>
+            <a href="./compareOptions.html">Compare options</a>
+          </div>
+        </details>
+        <a href="./landingpage.html#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="language-button" type="button" aria-label="Switch to Arabic">
+          <span class="language-active">EN</span><span class="language-divider">/</span><span>ع</span>
+        </button>
+        <a href="./login.html" class="nav-button">Get started <span>↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="device-page">
+      <div class="content-width">
+        <a class="back-link" href="./findScan.html"><i class="fa-solid fa-arrow-left"></i> Back to available devices</a>
+        <div class="device-layout">
+          <div class="device-information">
+            <span class="eyebrow">Device information</span>
+            <span class="scan-badge" id="deviceScan">MRI</span>
+            <h1 id="deviceName">Siemens MAGNETOM Aera</h1>
+            <p class="center-name"><i class="fa-solid fa-hospital"></i> <span id="deviceCenter">King Hussein Cancer Center</span></p>
+            <p class="device-description" id="deviceDescription"></p>
+
+            <div class="information-grid">
+              <div class="information-item"><i class="fa-solid fa-location-dot"></i><div><span>Location</span><strong id="deviceLocation">Amman, Jordan</strong></div></div>
+              <div class="information-item"><i class="fa-solid fa-tag"></i><div><span>Estimated price</span><strong id="devicePrice">From 45 JOD</strong></div></div>
+              <div class="information-item"><i class="fa-solid fa-clock"></i><div><span>Availability</span><strong>Sun - Thu, 8:00 AM - 5:00 PM</strong></div></div>
+              <div class="information-item"><i class="fa-solid fa-circle-check"></i><div><span>Current status</span><strong class="available">Available for booking</strong></div></div>
+            </div>
+
+            <div class="info-block">
+              <h2><i class="fa-solid fa-clipboard-check"></i> Preparation instructions</h2>
+              <p id="deviceInstructions"></p>
+            </div>
+          </div>
+
+          <div class="device-image-panel">
+            <img src="../images/mri.jpg" alt="Medical imaging device" id="deviceImage">
+            <div class="image-caption"><i class="fa-solid fa-camera"></i> Device preview</div>
+          </div>
+        </div>
+
+        <section class="booking-panel" aria-labelledby="bookingHeading">
+          <div>
+            <span class="eyebrow">Next step</span>
+            <h2 id="bookingHeading">Request an appointment</h2>
+            <p>Select a preferred date and time. The center will confirm your appointment.</p>
+          </div>
+          <form id="bookingForm">
+            <div class="form-row">
+              <label>Full name<input type="text" name="name" autocomplete="name" required></label>
+              <label>Phone number<input type="tel" name="phone" placeholder="07XXXXXXXX" autocomplete="tel" required></label>
+            </div>
+            <div class="form-row">
+              <label>Preferred date<input type="date" id="appointmentDate" name="date" required></label>
+              <label>Preferred time
+                <select name="time" required>
+                  <option value="" disabled selected>Select a time</option>
+                  <option>09:00 AM</option><option>11:00 AM</option><option>01:00 PM</option><option>03:00 PM</option>
+                </select>
+              </label>
+            </div>
+            <button class="confirm-button" type="submit"><i class="fa-solid fa-calendar-check"></i> Confirm booking request</button>
+          </form>
+          <p class="confirmation" id="confirmation" hidden><i class="fa-solid fa-circle-check"></i> Your request was received. The center will contact you to confirm the appointment.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 ScanJO. All rights reserved.</p>
+      <a href="#top">Back to top <span>↑</span></a>
+    </div>
+  </footer>
+
+  <script>
+    const deviceData = {
+      MRI: {
+        description: "High-quality magnetic resonance imaging for organs, joints, and soft tissues. The device provides detailed images without ionizing radiation.",
+        instructions: "Remove metal objects and tell the technician if you have implants. Follow the center's fasting instructions if contrast is required.",
+        price: "From 45 JOD",
+        location: "Amman, Jordan"
+      },
+      CT: {
+        description: "Fast cross-sectional imaging for detailed views of bones, organs, and blood vessels, with efficient results for a wide range of examinations.",
+        instructions: "Bring your referral and previous scans. Contrast scans may require fasting and a kidney function test.",
+        price: "From 35 JOD",
+        location: "Jordan"
+      },
+      Ultrasound: {
+        description: "Real-time imaging that uses sound waves to examine organs and soft tissues safely and comfortably.",
+        instructions: "Preparation depends on the body area. Ask the center whether you should arrive fasting or with a full bladder.",
+        price: "From 20 JOD",
+        location: "Jordan"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const scan = params.get("scan") || "MRI";
+    const details = deviceData[scan] || deviceData.MRI;
+    document.querySelector("#deviceScan").textContent = scan;
+    document.querySelector("#deviceName").textContent = params.get("device") || "Siemens MAGNETOM Aera";
+    document.querySelector("#deviceCenter").textContent = params.get("center") || "King Hussein Cancer Center";
+    document.querySelector("#deviceDescription").textContent = details.description;
+    document.querySelector("#deviceInstructions").textContent = details.instructions;
+    document.querySelector("#devicePrice").textContent = details.price;
+    document.querySelector("#deviceLocation").textContent = details.location;
+
+    const appointmentDate = document.querySelector("#appointmentDate");
+    appointmentDate.min = new Date().toISOString().split("T")[0];
+
+    document.querySelector("#bookingForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      event.currentTarget.hidden = true;
+      document.querySelector("#confirmation").hidden = false;
+    });
+
+    const header = document.querySelector("header");
+    const updateHeaderState = () => header.classList.toggle("scrolled", window.scrollY > 24);
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+  </script>
+</body>
+</html>

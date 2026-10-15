@@ -390,11 +390,66 @@ nav a.active::after {
 }
 
 .result-card {
+  overflow: hidden;
   padding: 24px;
   border: 1px solid var(--border);
   border-radius: 18px;
   background: rgba(249, 250, 255, .92);
   box-shadow: 0 14px 32px rgba(23, 27, 47, .07);
+}
+
+.device-visual {
+  position: relative;
+  height: 175px;
+  margin: -24px -24px 22px;
+  overflow: hidden;
+  background: var(--lavender);
+}
+
+.device-visual img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.device-visual-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px;
+  background: rgba(23, 27, 47, .72);
+  color: white;
+  opacity: 0;
+  text-align: center;
+  transition: opacity .35s ease;
+}
+
+.device-visual-overlay strong {
+  margin-bottom: 6px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
+}
+
+.device-visual-overlay p {
+  max-width: 280px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.result-card:hover .device-visual img,
+.result-card:focus-within .device-visual img {
+  filter: brightness(.48);
+  transform: scale(1.05);
+}
+
+.result-card:hover .device-visual-overlay,
+.result-card:focus-within .device-visual-overlay {
+  opacity: 1;
 }
 
 .result-card-top {
@@ -510,7 +565,6 @@ nav a.active::after {
 }
 
 .result-action {
-  margin-top: 18px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -521,6 +575,153 @@ nav a.active::after {
 
 .result-action span {
   margin-left: 5px;
+}
+
+.result-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.booking-action,
+.booking-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 13px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font: 700 10px "DM Sans", sans-serif;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.booking-action:hover,
+.booking-submit:hover {
+  background: #1d4eaf;
+  transform: translateY(-1px);
+}
+
+.booking-modal {
+  width: min(520px, calc(100% - 32px));
+  padding: 0;
+  border: 0;
+  border-radius: 22px;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 24px 70px rgba(23, 27, 47, .25);
+}
+
+.booking-modal::backdrop {
+  background: rgba(23, 27, 47, .55);
+  backdrop-filter: blur(3px);
+}
+
+.booking-modal-content {
+  position: relative;
+  padding: 34px;
+}
+
+.booking-modal h2 {
+  margin: 8px 0 6px;
+  font-size: 28px;
+  text-align: left;
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--lavender-light);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.booking-summary {
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.booking-form {
+  display: grid;
+  gap: 15px;
+}
+
+.booking-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-field {
+  display: grid;
+  gap: 6px;
+}
+
+.form-field label {
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #cbd4e7;
+  border-radius: 10px;
+  outline: 0;
+  background: white;
+  color: var(--ink);
+  font: 500 13px "DM Sans", sans-serif;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(36, 95, 212, .12);
+}
+
+.booking-submit {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 5px;
+}
+
+.booking-success {
+  padding: 20px 0 4px;
+  text-align: center;
+}
+
+.booking-success > i {
+  margin-bottom: 10px;
+  color: #32805e;
+  font-size: 42px;
+}
+
+.booking-success h3 {
+  margin-bottom: 5px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 21px;
+}
+
+.booking-success p {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .no-results {
